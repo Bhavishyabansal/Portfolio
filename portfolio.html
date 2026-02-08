@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavishya Bansal | Portfolio</title>
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --primary:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+}
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(15,23,42,.9);
+  border-bottom:1px solid rgba(56,189,248,.2);
+  z-index:1000;
+}
+nav .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:65px;
+}
+.logo{
+  font-weight:700;
+  font-size:1.3rem;
+  color:var(--primary);
+}
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:18px;
+  font-size:.9rem;
+}
+nav a:hover{color:var(--primary)}
+
+section{padding:55px 0}
+
+.hero{
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  padding-top:80px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:25px;
+  align-items:center;
+}
+.hero h1{
+  font-size:3rem;
+  font-weight:700;
+}
+.hero span{color:var(--primary)}
+.hero p{
+  margin:12px 0 22px;
+  color:var(--muted);
+  max-width:600px;
+}
+
+.hero-img{
+  background:var(--card);
+  padding:12px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.06);
+}
+.hero-img img{
+  width:100%;
+  display:block;
+  border-radius:14px;
+}
+
+.btns a{
+  display:inline-block;
+  padding:11px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  margin-right:12px;
+}
+.btn-primary{
+  background:var(--primary);
+  color:#020617;
+}
+.btn-outline{
+  border:2px solid var(--primary);
+  color:var(--primary);
+}
+.btns a:hover{opacity:.85}
+
+h2{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.05);
+}
+.card h3{
+  color:var(--primary);
+  margin-bottom:8px;
+}
+.card p, li{
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+ul{list-style:none}
+ul li::before{
+  content:"• ";
+  color:var(--primary);
+}
+
+.contact a{
+  text-decoration:none;
+  color:inherit;
+}
+
+footer{
+  text-align:center;
+  padding:25px 0;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .hero h1{font-size:2.3rem}
+  nav div:last-child{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo">Bhavishya</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Hi, I’m <span>Bhavishya Bansal</span></h1>
+      <p>
+        B.Tech CSE (Data Science) student passionate about Cloud Computing, IoT,
+        and Web Development. AWS Certified with strong fundamentals and hands-on projects.
+      </p>
+      <div class="btns">
+        <a href="#projects" class="btn-primary">My Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://www.springboard.com/blog/wp-content/uploads/2019/07/sb-blog-programming-1200x491.png" alt="AI and Programming">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a Computer Science & Engineering (Data Science) student at KIET Group
+        of Institutions, Ghaziabad. I enjoy learning new technologies and building
+        practical projects related to cloud, IoT, and programming.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <ul>
+          <li>C / C++</li>
+          <li>Python</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Web</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cloud & IoT</h3>
+        <ul>
+          <li>AWS (EC2, S3, IAM)</li>
+          <li>Arduino & Sensors</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>3D Digital Business Card</h3>
+        <p>Interactive business card using HTML, CSS & JavaScript.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="grid contact">
+      <a href="mailto:9bhavishyabansal@gmail.com" class="card">
+        <h3>Email</h3>
+        <p>9bhavishyabansal@gmail.com</p>
+      </a>
+      <a href="https://www.linkedin.com/in/bhavishya-bansal-228194381/" target="_blank" class="card">
+        <h3>LinkedIn</h3>
+        <p>View Profile</p>
+      </a>
+      <a href="https://github.com/Bhavishyabansal" target="_blank" class="card">
+        <h3>GitHub</h3>
+        <p>View Repositories</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Bhavishya Bansal <br>Thank You
+</footer>
+
+</body>
+</html>
